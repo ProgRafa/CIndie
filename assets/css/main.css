@@ -1,0 +1,349 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Merriweather');
+body, h1, h2, h3, h4, p, a
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: white;
+	text-decoration: none;	
+}
+
+input, button
+{
+	outline: none;
+}
+
+body 
+{
+	font-family: 'Merriweather', serif;
+	font-size: 14px;
+	line-height: 1;
+	background: rgba(0, 170, 106, 0.8);
+}
+
+@keyframes girar360
+{
+	0% {transform: rotateX(0deg) }
+	15% {transform: rotateX(60deg) }
+	30% {transform: rotateX(120deg) }
+	45% {transform: rotateX(180deg) }
+	60% {transform: rotateX(240deg) }
+	80% {transform: rotateX(300deg) }
+	100% {transform: rotateX(360deg) }
+}
+
+@keyframes aumentaTamanhoDaJanela
+{
+	0% {height: 60%; width: 60%}	
+	5%	{height: 62%; width: 62%}
+	10% {height: 64%; width: 64%}
+	15% {height: 66%; width: 66%}
+	20% {height: 68%; width: 68%}
+	25% {height: 70%; width: 70%}
+	30% {height: 72%; width: 72%}
+	35%	{height: 74%; width: 74%}
+	40%	{height: 76%; width: 76%}
+	45% {height: 78%; width: 78%}
+	50% {height: 80%; width: 80%}
+	55%	{height: 82%; width: 82%}
+	60% {height: 84%; width: 84%}
+	65% {height: 86%; width: 86%}
+	70% {height: 88%; width: 88%}
+	75% {height: 90%; width: 90%}
+	80% {height: 92%; width: 92%}
+	85%	{height: 94%; width: 94%}
+	90%	{height: 96%; width: 96%}
+	95% {height: 98%; width: 98%}
+	100% {height: 100%; width: 100%}
+}
+
+@media screen and (min-width: 560px) and (min-height: 500px)
+{
+
+	/*Cabeçálio da página */
+	header
+	{
+		position: absolute;
+		display: flex;
+		height: 40px;
+		width: 100%;
+		font-size: 0.8em;
+		margin: 0;
+		top: 0;
+		background: rgba(0, 49, 78, 0.8);
+		z-index: 800;
+	}
+	
+	header h1
+	{
+		text-align: center;
+		padding-top: 10px;
+		width: 40%; 
+	}
+
+	#menu
+	{
+		width: 60%;
+		top: 0;		
+	}
+
+	#menu ul
+	{
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	#menu ul li
+	{
+		display: inline;
+	}
+
+	#menu ul li a
+	{
+		transition: all ease 0.5s;
+		/transform: scale(1);
+	}
+
+	#menu ul li a:hover
+	{
+		color: rgb(0, 170, 106);
+		padding: 3px;
+		font-size: 1.3em;
+		background: white;
+		border: 4px solid lightgray;
+		border-radius: 4px;
+		/transform: scale(2);
+	}
+
+	header:hover
+	{
+		z-index: 3000;
+	}
+
+	/*Apresentação da página*/
+	#blocoApresentacao
+	{
+		width: 100%;
+		height: 700px;
+		font-size: 1.6em;
+		text-align: center;
+		overflow: hidden;
+		line-height: 2em;
+		overflow: hidden;
+	}
+
+	#blocoApresentacao div
+	{
+		position: absolute;
+		width: 100%;
+		height: 460px;
+		margin-top: 40px;
+		padding-top: 200px;
+		background: rgba(0, 49, 78, 0.8); 
+		z-index: 500;
+	}
+
+	#blocoApresentacao div input
+	{
+		width: 30%;
+		height: 30px;
+		font-size: 1.3em;
+		border: 1px solid white;
+		border-radius: 20px;
+		padding:5px 30px;
+		transition: width 1s;
+	}
+
+	#blocoApresentacao div input:focus
+	{
+		border: 2px solid lightblue;
+		border-radius: 20px;
+		width: 60%; 
+	}
+
+	#blocoApresentacao div button
+	{
+		font-size: 1em;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		margin-bottom: 2px;
+		background: rgb(0, 170, 106);
+		color: white;
+	}
+
+	#blocoApresentacao div button:hover
+	{
+		background: rgba(0, 170, 106, 0.8);
+	}
+
+	#blocoApresentacao div button:active
+	{
+		background: rgba(0, 170, 106, 0.5);
+	}
+	#blocoApresentacao div button:hover i
+	{
+		color: black;
+	}
+
+	#blocoApresentacao div hr
+	{
+		margin: 10px auto;
+		max-width: 80px;
+		border-color: rgba(0, 170, 106, 0.8);
+		border-width: 6px;
+		animation-name: girar360;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+
+	#blocoApresentacao video
+	{
+		min-height: 100%;
+		left: 0;
+		top: 0;
+	}	
+
+
+	/*div com filmes: lançamentos, mais assistidos e recomendados*/
+	#conteudoFilmes
+	{
+		padding-top: 50px; 
+		height: 2100px;
+		background: rgba(0, 170, 106, 0.8);
+		text-align: center;
+	}
+
+	#conteudoFilmes .videos_dinamicos
+	{
+		height: 600px;
+		margin: 0px 30px;
+		position: relative;
+		background: rgba(0, 49, 78, 1);
+		box-shadow: -8px 8px 20px 10px rgba(0, 49, 78, 0.5);
+		z-index: 1000;
+	}
+
+	#conteudoFilmes h2
+	{
+		padding-top: 20px;
+		width: 100%;
+		height: 40px;
+	}
+
+	#conteudoFilmes .maisAssistidos
+	{
+		margin-top: 70px;
+	}
+
+	#conteudoFilmes .recomendados
+	{
+		margin-top: 70px;
+	}
+
+
+	/*Tamanho de botões next e previous e formatação do vídeo*/
+	.video
+	{
+		height: 540px;
+	}
+	
+	.video a video
+	{
+		height: 50%;
+		margin-top: 270px;
+		transform: translateY(-135px);
+		transition: all 1s;
+	}
+
+	.video button
+	{
+		height: 100%;
+		top:0;
+		width: 60px;
+		font-size: 2em;
+		color: rgba(0, 170, 106, 1);
+		background: rgba(100,100,100,0.2);
+		border: none;
+		cursor: pointer;
+	}
+
+	.left
+	{
+		position: absolute;
+		left: 0;
+	}
+
+	.right
+	{
+		position: absolute;
+		right: 0;
+	}
+
+	.video button:hover
+	{
+		background: rgba(0,0,0, 0.5);
+		color: white;
+	}
+
+	.video button:active
+	{
+		background: black;
+		color: white;
+	}
+
+	/*Dica usar ação hover em um compnente statico, facilita no target do cursor*/
+	.video video:hover
+	{
+		position: absolute;
+		margin-top: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		animation-name: aumentaTamanhoDaJanela;
+		animation-duration: 1s;
+		background: black;
+		transform: none;
+		z-index: 2000;	
+	}
+
+}
+
+@media screen and (max-height: 540px), (max-width: 550px)
+{
+	header
+	{
+		position: fixed;
+		height: 30px;
+		width: 100%;
+		font-size: 0.6em;
+		margin: 0;
+		top: 0;
+		background: lightblue;
+	}
+
+	header h1
+	{
+		margin: 5px 15px;
+	}
+
+	#blocoApresentacao
+	{
+		margin-top: 30px;
+		min-width: 100%;
+		height: 300px;
+		font-size: 1.5em;
+		text-align: center;
+		line-height: 1.5em;
+		overflow: hidden;
+	}
+
+	#blocoApresentacao video
+	{
+		min-width: 100%;
+		min-height: 100%;
+		left: 0;
+		top: 30px;
+	}
+}

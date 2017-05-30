@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>CIndie</title>
+    <meta charset="utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/visualizarFilmesLayout.css">
+</head>
+
+<body>
+    <script>
+        var query = window.location.search.substring(1);
+
+        var createMovie = document.createElement("video");
+        createMovie.src="assets/videos/"+query;
+        document.body.appendChild(createMovie);
+    </script>    
+</body>
+
+</html>

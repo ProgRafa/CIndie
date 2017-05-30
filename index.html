@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>CIndie</title>
+		<meta charset="utf-8" />
+		<meta id="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/Footer.css">
+		<link rel="stylesheet" href="assets/css/sideMenu.css">
+	</head>
+		
+	<body>
+		<!--Cabeçalio com links para partes específicas
+		da página-->
+		<header> 
+				<h1><a href="#">CIndie <span>Comunidade de Cinefilos</span></a></h1>
+			<nav id="menu">
+				<ul>
+					<li><a href="#lanc">Lançamentos</a> - </li>
+					<li><a href="#ma">Mais Assistidos</a> - </li>
+					<li><a href="#rec">Recomendados</a> - </li>
+					<li><a href="#contact">Mídias</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!--Menu lateral com links para outras páginas
+		do CIndie como login, fórum...-->
+		<div id="sideMenu">
+			<div class="btn trigger">
+				<span class="line"></span>
+			</div>
+			
+			<div class="icons">
+				<div class="rotater">
+					<div class="btn btn-icon">
+						<a href=""><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="rotater">
+					<div class="btn btn-icon">
+						<a href="kkk"><i class="fa fa-usd" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="rotater">
+					<div class="btn btn-icon">
+						<a href=""><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="rotater">
+					<div class="btn btn-icon">
+						<a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Apresentação da página com caixa de texto para busca de curtas-->
+		<section id="blocoApresentacao">
+			<div>
+				<h1>Bem Vindo ao CIndie</h1>
+				<hr>
+				<p>Breve descricao do site</p>
+				<form>
+					<input type="text" id="busca" placeholder="Digite aqui o curta que você procura"></input>
+					<button id="butaoBuscar"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+			</div>
+			<video autoplay muted loop>
+				<source src="assets/videos/cdm.mp4" type="video/mp4">
+			</video>-->
+		</section>
+		
+		<section id="conteudoFilmes">
+			<div id="escondida" hidden=true></div>
+			
+			<!--Curtas recetemente lançados-->
+			<div id="lanc" class="videos_dinamicos lancamentos">
+				<h2>Lancamentos do mes de Marco</h2>
+
+				<div class="video">
+					<button type="button" class="right"  name="0"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button type="button" class="left"  name="0"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+				</div>	
+			</div>
+			
+			<!--Curtas com maior numero de views do mês-->
+			<div id="ma" class="videos_dinamicos maisAssistidos">
+				<h2>Mais Assistidos</h2>
+				
+				<div class="video">
+					<button type="button" class="right"  name="1"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button type="button" class="left"  name="1"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+				</div>
+			</div>
+			
+			<!--Curtas que altamente recomendados-->
+			<div id="rec" class="videos_dinamicos recomendados">
+				<h2>Recomendados</h2>
+
+				<div class="video">
+					<button type="button" class="right"  name="2"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+					<button type="button" class="left"  name="2"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+				</div>
+			</div>
+		</section>	
+
+
+		<!--Rodapé da página com redes
+		sociais e área para contato-->
+		<footer>
+			<div class="BlocoContato" id="contact">
+				<div class="Midias borda">
+					<h3>Emails</h3>
+					<ul class="cel">
+						<li>test_1@gmail.com</li>
+						<li>test_2@gmail.com</li>
+						<li>admin_1@gmail.com</li>
+						<li>admin_2@gmail.com</li>
+					</ul>
+				</div>
+				
+				<div class="Midias">
+					<h3>Telefones</h3>
+					<ul class="cel">
+						<li>(51)91111-1111</li>
+						<li>(51)91111-1111</li>
+						<li>(51)91111-1111</li>
+					</ul>
+				</div>
+				
+				<div id="redes">
+					<ul id="alt">
+						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/controleVideos.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".trigger").click(function() {
+					$("#sideMenu").toggleClass("active"); 
+				});
+			});
+		</script>
+	</body>
+</html>

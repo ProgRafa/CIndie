@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+body
+{
+    font-family: 'Merriweather', serif;
+    background: black; 
+}
+
+video
+{
+    min-width: 100%;
+    min-height: 100%;
+}

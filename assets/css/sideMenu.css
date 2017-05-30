@@ -1,0 +1,173 @@
+#sideMenu
+{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 5000;
+    font-size: 1.5em;
+}
+
+
+.btn
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    transition: all ease 0.5s;
+}
+
+.trigger
+{
+    z-index: 500;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.trigger:hover
+{
+    transform: scale(1.2);
+}
+
+.line
+{
+    position: absolute;
+    width: 60%;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    border-radius: 6px;
+    transition: background-color 0.3s, height 0.3s, top 0.3s;
+}
+
+.trigger:hover .line
+{
+    background: rgba(0, 170, 106, 0.8);
+}
+
+.trigger:hover .line:after
+{
+   background: rgba(0, 170, 106, 0.8); 
+}
+
+.trigger:hover .line:before
+{
+   background: rgba(0, 170, 106, 0.8); 
+}
+
+.line:before, .line:after 
+{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #fff;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.line:before 
+{
+        top: -12px;
+        transform-origin: 20% 10%;
+}
+
+.line:after 
+{
+    top: 12px;
+    transform-origin: 10% 30%;
+}
+
+.active .line:before 
+{
+    transform: rotate(45deg);
+    width: 140%; 
+}
+
+.active .line
+{
+    height: 0;
+    width: 55%; 
+}
+
+.active .line:after 
+{
+    transform: rotate(-50deg);
+    width: 140%; 
+}
+
+.rotater 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+}
+
+.btn-icon .fa 
+{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.active .icons .rotater .btn-icon .fa
+{
+    opacity: 1;
+}
+
+.active .icons .rotater:nth-child(1) .btn-icon
+{
+    font-size: 1.5em;
+    transform: translateY(100px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.active .icons .rotater:nth-child(2) .btn-icon
+{
+    font-size: 1.5em;
+    transform: translateX(-100px) translateY(70px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.active .icons .rotater:nth-child(3) .btn-icon
+{
+    font-size: 1.5em;
+    transform: translateX(-100px) translateY(-70px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.active .icons .rotater:nth-child(4) .btn-icon
+{
+    font-size: 1.5em;
+    transform: translateY(-100px) rotate(30deg);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.rotater
+{
+    transition: transform 0.3s;
+}
+
+.rotater:hover
+{
+    transform: scale(1.2);
+}
+
+.rotater:hover .fa
+{
+    color: rgba(0, 170, 106, 0.8);
+}
