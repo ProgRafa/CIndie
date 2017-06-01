@@ -8,10 +8,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/Footer.css">
+		<script src="assets/js/controleVideos.js"></script>
 		<link rel="stylesheet" href="assets/css/sideMenu.css">
 	</head>
 		
-	<body>
+	<body onscroll="movimentouScroll()">
 		<!--Cabeçalio com links para partes específicas
 		da página-->
 		<header> 
@@ -35,22 +36,22 @@
 			
 			<div class="icons">
 				<div class="rotater">
-					<div class="btn btn-icon">
+					<div class="btn btn-icon" name="Login">
 						<a href=""><i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<div class="rotater">
-					<div class="btn btn-icon">
+					<div class="btn btn-icon" name="Donate">
 						<a href="kkk"><i class="fa fa-usd" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<div class="rotater">
-					<div class="btn btn-icon">
+					<div class="btn btn-icon" name="News">
 						<a href=""><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<div class="rotater">
-					<div class="btn btn-icon">
+					<div class="btn btn-icon" name="Forum">
 						<a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
 					</div>
 				</div>
@@ -144,7 +145,6 @@
 			</div>
 		</footer>
 
-		<script src="assets/js/controleVideos.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function() {

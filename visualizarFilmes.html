@@ -1,20 +1,39 @@
-<html>
+<!doctype html>
 
+<html>
 <head>
     <title>CIndie</title>
     <meta charset="utf-8" />
     <meta id="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/visualizarFilmesLayout.css">
+    <script src="assets/js/visualizarFilmesJS.js"></script>
 </head>
 
 <body>
     <script>
-        var query = window.location.search.substring(1);
-
+        var query = window.location.search.substring(6);
         var createMovie = document.createElement("video");
         createMovie.src="assets/videos/"+query;
         document.body.appendChild(createMovie);
-    </script>    
-</body>
+        createMovie.controls=false;
+        createMovie.autoplay=true;
+    </script>
 
+    <div id="controls">
+        <div class="btn-ctrl" id="play"><i class="fa fa-play" aria-hidden="true"></i></div>
+        <span>00:00:00</span>
+        <div id="timer">
+            <div id="barraTempo"></div>
+        </div>
+        <div id="sound">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+            <div id="barra">
+                <div id="btnAjuste"></div>
+            </div>
+        </div>
+        <div class="btn-ctrl" id="fullscreen"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
+        <a href="download/" download="curta"><div class="btn-ctrl" id="download"><i class="fa fa-download" aria-hidden="true"></i></div></a>    
+    </div>    
+</body>
 </html>

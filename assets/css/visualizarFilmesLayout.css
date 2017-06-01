@@ -1,13 +1,168 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-
 body
 {
-    font-family: 'Merriweather', serif;
-    background: black; 
+     background: black;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     
+}
+
+a
+{
+    text-decoration: none;
+    color: rgba(0, 49, 78, 1);
 }
 
 video
 {
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+a
+{
+    margin: auto 0px;
+}
+
+#controls
+{
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 60px;
+    background: rgba(0, 170, 106, 0.8);
+    display: flex;
+    transition: all ease 0.8s;
+    cursor: pointer;
+}
+
+.btn-ctrl
+{
+    width: 45px;
+    height: 42px;
+    font-size: 2em;
+    color: rgba(0, 49, 78, 1);
+    border: 4px solid rgba(0, 170, 106, 0);
+    text-align: center;
+    margin: auto 10px;
+    cursor: pointer;
+    transition: background ease 0.3s;
+}
+
+.pause
+{
+    position: absolute !important;
+    width: 6px;
+    height: 30px;
+    left: 25px;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    background: rgba(0, 49, 78, 1);
+}
+
+.pause:before
+{
+    content: "";
+    position: absolute !important;
+    width: 6px;
+    margin-left:10px;
+    height: 30px;
+    border-radius: 3px;
+    background: rgba(0, 49, 78, 1);
+}
+
+.btn-ctrl:hover
+{
+    background: rgba(0, 110, 80, 1);
+    transition: background ease 0.3s; 
+}
+
+.btn-ctrl:active
+{
+    color: rgba(0, 39, 58, 1);
+    background: rgba(0, 80, 40, 1);
+}
+
+.btn-ctrl i
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#timer
+{
+    width: 60%;
+    display: flex;
+    margin: 0 20px; 
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+}
+
+span
+{
+    color: rgba(0, 49, 78, 1);
+    position: relative;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#barraTempo
+{
+    height: 10px;
+    width: 90%;
+    margin: 0 5px;
+    z-index: 5000;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 49, 78, 1); 
+}
+
+#sound
+{
+    cursor: pointer;
+    font-size: 2em;
+    color: rgba(0, 49, 78, 1);
+    width: 20%;
+}
+
+#sound i 
+{
+    top: 50%;
+    transform: translateY(50%);
+}
+
+#barra
+{
+    width: 60%;
+    height: 5px;
+    position: relative;
+    left: 60%;
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+    background: rgba(0, 49, 78, 1);
+}
+
+#btnAjuste
+{
+    position: relative;
+    top: -50%;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: black;
 }
