@@ -121,7 +121,7 @@ span
 #barraTempo
 {
     height: 10px;
-    width: 90%;
+    width: 0;
     margin: 0 5px;
     z-index: 5000;
     border-radius: 5px;
@@ -133,7 +133,6 @@ span
 
 #sound
 {
-    cursor: pointer;
     font-size: 2em;
     color: rgba(0, 49, 78, 1);
     width: 20%;
@@ -141,24 +140,26 @@ span
 
 #sound i 
 {
+    cursor: pointer;
     top: 50%;
     transform: translateY(50%);
 }
 
 #barra
 {
-    width: 60%;
+    width: 100px;
     height: 5px;
     position: relative;
-    left: 60%;
+    margin-left: 35px;
     cursor: pointer;
-    transform: translate(-50%, -100%);
+    transform: translateY(-100%);
     background: rgba(0, 49, 78, 1);
 }
 
 #btnAjuste
 {
     position: relative;
+    transform: translateX(100px);
     top: -50%;
     cursor: pointer;
     width: 12px;

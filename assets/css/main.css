@@ -74,11 +74,18 @@ body
 		z-index: 800;
 	}
 	
+	#logo
+	{
+		top: 0;
+		left: 0;
+		height: 40px;
+	}
+
 	header h1
 	{
-		text-align: center;
 		padding-top: 10px;
-		width: 40%; 
+		margin-left: 10px;
+		width: 40%;
 	}
 
 	#menu
